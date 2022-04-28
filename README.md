@@ -11,13 +11,17 @@
 
 ### User
 
-/users/edit -> Edit Profile
-/users/delete -> Delete Profile
+/users/:id -> See User
+/users/logout -> Logout
+/users/edit -> Edit MY Profile
+/users/delete -> Delete MY Profile
 
 ### Video
 
-/videos/watch -> Watch Video
-/videos/edit -> Edit Video
-/videos/delete -> Delete Video
+/videos/:id -> See Video
+/videos/:id/edit -> Edit Video
+/videos/:id/delete -> Delete Video
+/videos/upload => Upload Video
+
 /videos/comment -> Comment on a Video
 /videos/comment/delete -> Delete a Comment on a Video
