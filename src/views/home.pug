@@ -2,3 +2,12 @@ extends partials/base
 
 block content
     h1 Home - trending
+    ul.videos
+        each video in videos
+            li
+                h3=video.title
+                p=video.description
+                p=video.createdAt
+        else
+            li
+                h3 Not found
