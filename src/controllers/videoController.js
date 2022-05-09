@@ -1,3 +1,7 @@
+let user = {
+  username: 'jsw',
+  isLogin: false,
+};
 export const trending = (req, res) => {
   let videos = [
     {
@@ -17,7 +21,7 @@ export const trending = (req, res) => {
     },
   ];
   videos = {};
-  return res.render('home', { pageTitle: 'Home', videos });
+  return res.render('home', { pageTitle: 'Home', videos, user });
 };
 export const search = (req, res) => res.send('Search');
 export const upload = (req, res) => res.send('Upload Video');
