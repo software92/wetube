@@ -1,13 +1,11 @@
 extends partials/base
+include mixins/videoBlock
 
 block content
     h1 Home - trending
     ul.videos
         each video in videos
-            li
-                h3=video.title
-                p=video.description
-                p=video.createdAt
+            +videoBlock(video)
         else
             li
                 h3 Not found

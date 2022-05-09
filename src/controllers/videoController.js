@@ -1,5 +1,5 @@
 export const trending = (req, res) => {
-  const videos = [
+  let videos = [
     {
       title: 'a',
       description: 'aa',
@@ -16,6 +16,7 @@ export const trending = (req, res) => {
       createdAt: 415,
     },
   ];
+  videos = {};
   return res.render('home', { pageTitle: 'Home', videos });
 };
 export const search = (req, res) => res.send('Search');
