@@ -5,6 +5,9 @@ import userRouter from './routers/userRouter';
 import videoRouter from './routers/videoRouter';
 
 const app = express();
+app.set('view engine', 'pug');
+app.set('views', process.cwd() + '/src/views');
+// app.set('views', __dirname + '/views');
 app.use(morgan('tiny'));
 
 app.use('/', globalRouter);
