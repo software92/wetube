@@ -3,17 +3,5 @@ html(lang='ko')
     head
         title #{pageTitle} | Wetube
     body
-        header.nav
-            ul
-                if user.isLogin
-                    li
-                        a(href='/login') Login
-                    li
-                        a(href='/join') Join
-                else 
-                    li
-                        a(href='/users/edit') Edit
-                    li
-                        a(href='/logout') Logout
         block content
         include footer

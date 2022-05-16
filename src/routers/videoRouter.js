@@ -1,10 +1,17 @@
 import express from 'express';
-import { edit, see, upload, deleteVideo } from '../controllers/videoController';
+import {
+  getEdit,
+  postEdit,
+  see,
+  upload,
+  deleteVideo,
+} from '../controllers/videoController';
 
 const videoRouter = express.Router();
 
 videoRouter.get('/:id(\\d+)', see);
-videoRouter.get('/:id(\\d+)/edit', edit);
+videoRouter.get('/:id(\\d+)/edit', getEdit);
+videoRouter.post('/:id(\\d+)/edit', postEdit);
 videoRouter.get('/:id(\\d+)/delete', deleteVideo);
 videoRouter.get('/upload', upload);
 // URL parameter가 상위에 있어도 정규표현식을 사용해 문자를 제한하기 때문에,
