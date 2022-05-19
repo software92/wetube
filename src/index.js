@@ -5,6 +5,8 @@ import globalRouter from './routers/globalRouter';
 import userRouter from './routers/userRouter';
 import videoRouter from './routers/videoRouter';
 
+import './db';
+
 const app = express();
 app.set('view engine', 'pug');
 app.set('views', process.cwd() + '/src/views');
