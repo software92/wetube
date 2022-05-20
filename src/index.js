@@ -6,6 +6,7 @@ import userRouter from './routers/userRouter';
 import videoRouter from './routers/videoRouter';
 
 import './db';
+import './models/Video';
 
 const app = express();
 app.set('view engine', 'pug');
